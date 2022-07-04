@@ -16,25 +16,33 @@
         */
         
         body{
-            margin: 0;
+            margin: 10px;
         }
-
+        .peca{
+            width: 200px;
+            height: auto;
+            background-color: transparent;
+            border: 5px black solid;
+            margin-top: 0;
+        }
         div{
             width: 200px;
             height: 200px;
             background-color: red;
         }
-
-        .blue{
-            opacity: 0.5;
-            width: 100px;
-            height: 100px;
+        span{
+            width: 200px;
+            height: 200px;
+            display: block;
             background-color: blue;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
-    <div></div><br>
-    <div class="blue"></div>
+    <span class="peca">
+        <div></div>
+        <span></span>   
+    </span>
 </body>
 </html>
