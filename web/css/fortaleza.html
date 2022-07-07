@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortaleza</title>
+    <style>
+
+        :root{
+            --blue: #365ba0;
+            --red: #c1252a;
+            --yellow: #ffd700;
+            --white: #fff;
+            --dark-blue: #0a2f5b;
+            --dark-red: #ff0000;
+        }
+
+
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            will-change: background-color;
+            animation: bg 10s ease-in-out infinite;
+        }
+
+        #confetti{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .logo-wrapper{
+            will-change: transform;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .star{
+            font-size: 4em;
+            text-align: center;
+            color: var(--yellow);
+        }
+
+        .title{
+            border: 5px solid var(--blue);
+            padding: 5px;
+            background-color: var(--white);
+            width: 187px;
+        }
+
+        .name{
+            font-size: 2em;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            color: var(--blue);
+            text-align: center;
+        }
+
+        .forms{
+            position: relative;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 150px 103.5px 0 103.5px;
+            border-color: var(--blue) transparent transparent transparent;
+        }
+
+        .forms:before{
+            content: '';
+            z-index: 1;
+            display: block;
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 143px 99px 0 99px;
+            border-color: var(--white) transparent transparent transparent;
+        }
+        .left{
+            top: -148px;
+            left: -92px;
+            z-index: 2;
+            position: absolute;
+            border-left: 90px solid transparent;
+            border-top: 130px var(--blue) solid;
+        }
+        .right{
+            top: -148px;
+            left: 2px;
+            z-index: 2;
+            position: absolute;
+            border-right: 90px solid transparent;
+            border-top: 130px var(--red) solid;
+        }
+
+        @keyframes bg{
+            0%{
+                background-color: var(--white);
+            }
+            25%{
+                background-color: var(--dark-blue);
+            }
+            50%{
+                background-color: var(--white);
+            } 
+            75%{
+                background-color: var(--dark-red);
+            }           
+            100%{
+                background-color: var(--white);
+            }           
+        }
+
+        @keyframes pulse{
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.3);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="confetti"></canvas>
+    <div class="logo-wrapper">
+        <div class="star">★</div>
+        <div class="title">
+            <div class="name">fortaleza</div>
+        </div>
+        <div class="forms">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script>
+        const canvas = document.getElementById('confetti')
+
+        const jsConfetti = new JSConfetti({ canvas })
+        jsConfetti.addConfetti({
+            emojis: ['😍', '⚽️', '🏆', '💙', '🤍', '❤️', '🔵', '🔴', '⚪️', '🇫🇷', '🦁'],
+        });
+    </script>
+</body>
+</html>
