@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotaleza</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo-wrapper{
+            will-change: transform;
+        }
+        .star{
+            font-size: 4em;
+            text-align: center;
+            color: yellow;
+        }
+        .title{
+            border: 5px solid blue;
+            padding: 5px;
+            background-color: white;
+            width: 187px;
+        }
+        .name{
+            font-size: 2em;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            color: blue;
+            text-align: center;
+        }
+        .forms{
+            position: relative;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width:  150px 103.5px 0 103.5px;
+            border-color: blue transparent transparent transparent;
+        }
+
+        .forms:before{
+            content: '';
+            z-index: 1;
+            display: block;
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 143px 99px 0 99px;
+            border-color: white transparent transparent transparent;
+        }
+        .left{
+            top: -148px;
+            left: -92px;
+            z-index: 2;
+            position: absolute;
+            border-left: 90px solid transparent;
+            border-top: 130px blue solid;
+        }
+        .right{
+            top: -148px;
+            left: 2px;
+            z-index: 2;
+            position: absolute;
+            border-right: 90px solid transparent;
+            border-top: 130px red solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <div class="star">★</div>
+        <div class="title">
+            <div class="name">fortaleza</div>
+        </div>
+        <div class="forms">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+    </div>
+</body>
+</html> 
