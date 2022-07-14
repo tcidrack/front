@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 1000px;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 74px;
+    background-color: #C4170C;
+}
+
+header h1{
+    font-size: 0;
+}
+
+header .logo{
+    width: 42px;
+    height: 42px;
+    display: block;
+}
