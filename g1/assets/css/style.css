@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body{
-    height: 1000px;
+    min-height: 2000px;
 }
 
 header{
@@ -16,12 +17,110 @@ header{
     background-color: #C4170C;
 }
 
+header .header-wrapper{
+    padding: 8px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    min-width: 1360px;
+}
+
 header h1{
     font-size: 0;
+}
+
+
+header a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header .logo{
     width: 42px;
     height: 42px;
     display: block;
+}
+
+header .menu-wrapper{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+header .menu-wrapper .menu-logo{
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+header .menu-wrapper p{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+}
+
+header .search-wrapper{
+    position: absolute;
+    right: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+header .search-wrapper form{
+    display: flex;
+    padding: 6px;
+}
+
+header .search-wrapper .search-logo{
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+header .search-wrapper .search-logo svg{
+    fill: #fff;
+}
+
+header .search-wrapper input{
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;    
+    width: 124px;
+    transition: width 0.3s ease-in-out;
+}
+
+header .search-wrapper input::placeholder { 
+    color: #fff;
+}
+
+header .search-wrapper.active{
+    background-color: #fff;    
+}
+
+header .search-wrapper.active .search-logo svg{
+    fill: #333;
+}
+
+header .search-wrapper.active input{
+    width: 245px;
+    color: #333;
+}
+
+header .search-wrapper.active input::placeholder { 
+    color: #333;
+}
+
+header .search-wrapper.active input{
+    width: 245px;
 }
