@@ -24,7 +24,7 @@ header .header-wrapper{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     align-items: center;
-    min-width: 1000px;
+    min-width: 1320px;
 }
 
 header h1{
