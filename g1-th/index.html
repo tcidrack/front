@@ -7,13 +7,45 @@
     <title>g1 cópia</title>
     <link rel="icon" href="assets/icons/favicon.webp">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <a href="/">
-            <h1>G1 - O portal de notícias da Globo</h1>
-            <img class="logo" src="assets/icons/logo.svg" alt="G1 - O portal de notícias da Globo - Logo">
-        </a>
+        <div class="header-wrapper">
+            <nav>
+                <div class="menu-wrapper">
+                    <img class="menu-logo" src="assets/icons/menu.svg" alt="Menu logo" title="Menu">
+                    <p>Menu</p>
+                </div>
+            </nav>
+            <a href="/">
+                <h1>G1 - O portal de notícias da Globo</h1>
+                <img class="logo" src="assets/icons/logo.svg" alt="G1 - O portal de notícias da Globo - Logo">
+            </a>
+            <div class="search-wrapper">
+                <form action="">
+                    <div class="search-logo">
+                        <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m21.67 20.42-5.72-5.73a7.35 7.35 0 0 0 1.55-4.54c0-4.14-3.36-7.5-7.5-7.5-4.15 0-7.5 3.36-7.5 7.5s3.35 7.5 7.5 7.5c1.7 0 3.27-.57 4.53-1.54l5.73 5.73c.42.41 1.07.43 1.46.04.39-.39.37-1.04-.05-1.46zM10 15.65c-3.04 0-5.5-2.46-5.5-5.5s2.46-5.5 5.5-5.5c3.03 0 5.5 2.46 5.5 5.5s-2.47 5.5-5.5 5.5z"></path></svg>
+                    </div>
+                    <input type="text" placeholder="Buscar">
+                </form>
+            </div>
+        </div>
     </header>
+
+    <div class="content"></div>
+
+    <script>
+        const search = document.querySelector('.search-wrapper');
+        const searchInput = document.querySelector('.search-wrapper input');
+        searchInput.addEventListener('focus', function(e) {
+            search.classList.add('active');
+        });
+        searchInput.addEventListener('blur', function(e) {
+            search.classList.remove('active');
+        });
+    </script>
 </body>
 </html>
