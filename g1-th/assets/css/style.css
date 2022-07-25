@@ -13,6 +13,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 1000px;
     height: 74px;
     background-color: #C4170C;
 }
@@ -24,7 +25,7 @@ header .header-wrapper{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     align-items: center;
-    min-width: 1320px;
+    min-width: 80vw;
 }
 
 header h1{
