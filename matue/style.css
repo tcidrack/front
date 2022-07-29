@@ -20,7 +20,7 @@ header .capa img{
     border-radius: 10px;
 }
 
-header .botao{
+/*  header .botao{
     position: absolute;
     right: 100px;
     display: flex;
