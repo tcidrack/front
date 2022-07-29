@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    margin: 8px;
+}
+
+header .capa{
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+header .capa img{
+    border-radius: 10px;
+}
+
+header .botao{
+    position: absolute;
+    right: 100px;
+    display: flex;
+    background-color: rgb(110, 222, 110);
+    border-radius: 5px;
+}
+
+header .botao form{
+    display: flex;
+    padding: 6px;
+}
+
+header .botao a{
+    color: rgb(3, 159, 3);
+}
