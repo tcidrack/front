@@ -2,37 +2,69 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: arial,sans-serif;;
 }
 
 body{
-    margin: 8px;
+    margin-left: 15vw;
+}
+
+header h1{
+    position: absolute;
+    top: 10vh;
 }
 
 header .capa{
     display: flex;
     cursor: pointer;
     justify-content: center;
-    align-items: center;
 }
 
 header .capa img{
     border-radius: 10px;
 }
 
-/*  header .botao{
+.btn-link{
     position: absolute;
-    right: 100px;
-    display: flex;
-    background-color: rgb(110, 222, 110);
-    border-radius: 5px;
+    top: 13vh;
+    left: 38vw;
+    text-decoration: none;
+    border: 1px solid #227754;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    border-radius: 50px;
+    background-color: #BEFCDE;
+    color: #227754;
+}
+.btn-link:hover{
+    box-shadow: 1px 1px 1px #227754;
 }
 
-header .botao form{
-    display: flex;
-    padding: 6px;
+.sobre{
+    font-size: large;
 }
 
-header .botao a{
-    color: rgb(3, 159, 3);
+.artista{
+    position: absolute;
+    top: 30vh;
+    right: 10vw;
+}
+
+.artista a{
+    text-decoration: none;
+}
+
+body .letras{
+    position: absolute;
+    margin-top: 75px;
+    font-size: large;
+}
+
+.letra {
+    margin-top: 90px;
+    line-height: 20px;
+    font-size: 14px;
 }
