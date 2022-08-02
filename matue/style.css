@@ -2,21 +2,43 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: arial,sans-serif;;
+    font-family: arial,sans-serif;
 }
 
 body{
     margin-left: 15vw;
 }
 
-header h1{
-    position: absolute;
-    top: 10vh;
+.container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 20vh 70vh 10;
+    grid-template-areas: "h h"
+                         "m a"
+                         "f f";
 }
+
+header{
+    grid-area: h;
+}
+
+main{
+    grid-area: m;
+}
+
+aside{
+    grid-area: a;
+}
+
+footer{
+    grid-area: f;
+}
+
 
 header .capa{
     display: flex;
     cursor: pointer;
+    margin-top: 2px;
     justify-content: center;
 }
 
@@ -24,9 +46,15 @@ header .capa img{
     border-radius: 10px;
 }
 
+.cancao{
+    font-family: arial,sans-serif;
+    font-size: 17px;
+    line-height: 22px;
+}
+
 .btn-link{
     position: absolute;
-    top: 13vh;
+    top: 15vh;
     left: 38vw;
     text-decoration: none;
     border: 1px solid #227754;
@@ -47,24 +75,24 @@ header .capa img{
     font-size: large;
 }
 
-.artista{
-    position: absolute;
-    top: 30vh;
-    right: 10vw;
-}
-
 .artista a{
     text-decoration: none;
 }
 
 body .letras{
     position: absolute;
-    margin-top: 75px;
-    font-size: large;
+    margin-top: 70px;
+    font-size: 22px;
+    line-height: 24px;
 }
 
 .letra {
     margin-top: 90px;
     line-height: 20px;
+    font-size: 14px;
+}
+
+footer{
+    margin: 30px 0 20px;
     font-size: 14px;
 }
