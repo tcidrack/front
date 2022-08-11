@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        
+        .caixa {
+            width: 20%;
+            height: 200px;
+            background-color: blueviolet;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="order: 3;" class="caixa"></div>
+        <div style="order: 2;" class="caixa"></div>
+        <div style="order: 1;" class="caixa"></div>
+        <div style="order: 0;" class="caixa">CONTEÚDO</div>
+    </div>
+
+</body>
+</html>
