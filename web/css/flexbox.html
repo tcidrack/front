@@ -8,31 +8,66 @@
     <style>
         * {
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
         }
         
         .container {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            align-content: center;
+            row-gap: 10px;
+            column-gap: 30px;
+
+            /* indiferente: */
+            background-color: #f9eac3;
+            padding: 16px;
+            height: 100vh;
+        }
+
+        .bloco-1, .bloco-2, .bloco-3 {
+            /* indiferente: */
+            height: 150px;
+            width: 150px;
+            text-align: center;
+            font-size: 40px;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 16px;
         }
         
-        .caixa {
-            width: 20%;
-            height: 200px;
-            background-color: blueviolet;
-            border: 1px solid black;
+        .bloco-1 {
+            /* indiferente: */
+            background-color: #c6d8f0;
         }
+
+        .bloco-2 {
+            /* indiferente: */
+            background-color: #d8bfd8;
+        }
+
+        .bloco-3 {
+            /* indiferente: */
+            background-color: #ff9999;
+        }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <div style="order: 3;" class="caixa"></div>
-        <div style="order: 2;" class="caixa"></div>
-        <div style="order: 1;" class="caixa"></div>
-        <div style="order: 0;" class="caixa">CONTEÚDO</div>
-    </div>
+    <main class="container">
+        <div class="bloco-1">1</div>
+        <div class="bloco-2">2</div>
+        <div class="bloco-3">3</div>
+        <!-- <div class="bloco-1">4</div>
+        <div class="bloco-2">5</div>
+        <div class="bloco-3">6</div>
+        <div class="bloco-1">7</div>
+        <div class="bloco-2">8</div>
+        <div class="bloco-3">9</div>
+        <div class="bloco-1">10</div>
+        <div class="bloco-2">11</div>
+        <div class="bloco-1">12</div> -->
+    </main>
 
 </body>
 </html>
