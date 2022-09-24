@@ -35,8 +35,16 @@ footer{
 }
 
 
-header .capa{
-    display: flex;
+header {
+    display: grid;
+    grid-template-columns: 23vw 80px 80px 1fr 3fr;
+    grid-template-rows: 90px 40px 20px;
+    grid-gap: 10px;
+}
+
+header .capa {
+    grid-column: 4 / 5;
+    display: block;
     cursor: pointer;
     margin-top: 2px;
     justify-content: center;
@@ -46,10 +54,19 @@ header .capa img{
     border-radius: 10px;
 }
 
-.btn-link{
-    position: absolute;
-    top: 15vh;
-    left: 45vw;
+.cancao {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.titulo-da-musica {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.botao-ouvir{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
     text-decoration: none;
     border: 1px solid #227754;
     text-align: center;
@@ -61,14 +78,13 @@ header .capa img{
     color: #227754;
     max-height: 120px;;
 }
-.btn-link:hover{
+.botao-ouvir:hover{
     box-shadow: 1px 1px 1px #227754;
 }
 
-.btn-link-letras{
-    position: absolute;
-    top: 15vh;
-    left: 38vw;
+.botao-letras{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
     text-decoration: none;
     border: 1px solid #227754;
     text-align: center;
@@ -79,7 +95,7 @@ header .capa img{
     background-color: #BEFCDE;
     color: #227754;
 }
-.btn-link-letras:hover{
+.botao-letras:hover{
     box-shadow: 1px 1px 1px #227754;
 }
 
@@ -91,7 +107,7 @@ header .capa img{
     text-decoration: none;
 }
 
-body .letras{
+body .titulo-letras {
     position: absolute;
     margin-top: 70px;
     font-size: 22px;
