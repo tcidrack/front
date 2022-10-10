@@ -142,3 +142,13 @@ header .search-wrapper.active input {
     grid-row-end: span 2;
 }
 
+.content .recent-news {
+    display: grid;
+    grid-template-columns: 359px 1fr 386px;
+    grid-template-rows: repeat(10, 202px);
+    grid-gap: 40px 18px;
+}
+
+.content .recent-news article {
+    grid-column: span 2;
+}
